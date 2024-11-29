@@ -1,0 +1,246 @@
+2024-11-16 21:35:03,035 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-16 21:35:03,040 INFO supervisord started with pid 1
+2024-11-16 21:35:04,047 INFO spawned: 'cron' with pid 9
+2024-11-16 21:35:04,049 INFO spawned: 'npm' with pid 10
+2024-11-16 21:35:04,051 INFO spawned: 'php-fpm' with pid 11
+2024-11-16 21:35:04,135 INFO exited: npm (exit status 1; not expected)
+2024-11-16 21:35:05,136 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 21:35:05,137 INFO spawned: 'npm' with pid 20
+2024-11-16 21:35:05,137 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 21:35:05,179 INFO exited: npm (exit status 1; not expected)
+2024-11-16 21:35:07,183 INFO spawned: 'npm' with pid 27
+2024-11-16 21:35:07,230 INFO exited: npm (exit status 1; not expected)
+2024-11-16 21:35:10,234 INFO spawned: 'npm' with pid 34
+2024-11-16 21:35:10,283 INFO exited: npm (exit status 1; not expected)
+2024-11-16 21:35:11,283 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-16 21:36:31,108 WARN received SIGQUIT indicating exit request
+2024-11-16 21:36:31,109 INFO waiting for cron, php-fpm to die
+2024-11-16 21:36:31,112 INFO stopped: php-fpm (exit status 0)
+2024-11-16 21:36:32,114 INFO stopped: cron (terminated by SIGTERM)
+2024-11-16 21:36:33,586 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-16 21:36:33,590 INFO supervisord started with pid 1
+2024-11-16 21:36:34,595 INFO spawned: 'cron' with pid 9
+2024-11-16 21:36:34,598 INFO spawnerr: can't find command 'npm'
+2024-11-16 21:36:34,599 INFO spawned: 'php-fpm' with pid 10
+2024-11-16 21:36:35,632 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 21:36:35,633 INFO spawnerr: can't find command 'npm'
+2024-11-16 21:36:35,633 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-16 21:36:37,635 INFO spawnerr: can't find command 'npm'
+2024-11-16 21:36:40,639 INFO spawnerr: can't find command 'npm'
+2024-11-16 21:36:40,640 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-16 21:39:33,846 INFO reaped unknown pid 2583
+2024-11-17 11:43:25,402 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-17 11:43:25,405 INFO supervisord started with pid 1
+2024-11-17 11:43:26,407 INFO spawned: 'cron' with pid 9
+2024-11-17 11:43:26,411 INFO spawned: 'npm' with pid 10
+2024-11-17 11:43:26,412 INFO spawned: 'php-fpm' with pid 11
+2024-11-17 11:43:27,200 INFO exited: npm (exit status 127; not expected)
+2024-11-17 11:43:28,202 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 11:43:28,204 INFO spawned: 'npm' with pid 37
+2024-11-17 11:43:28,204 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 11:43:28,487 INFO exited: npm (exit status 127; not expected)
+2024-11-17 11:43:30,491 INFO spawned: 'npm' with pid 61
+2024-11-17 11:43:30,677 INFO exited: npm (exit status 127; not expected)
+2024-11-17 11:43:33,682 INFO spawned: 'npm' with pid 85
+2024-11-17 11:43:33,874 INFO exited: npm (exit status 127; not expected)
+2024-11-17 11:43:34,873 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-17 16:17:41,444 INFO reaped unknown pid 2103
+2024-11-17 17:13:19,159 WARN received SIGQUIT indicating exit request
+2024-11-17 17:13:19,168 INFO waiting for cron, php-fpm to die
+2024-11-17 17:13:19,243 INFO stopped: php-fpm (exit status 0)
+2024-11-17 17:13:20,250 INFO stopped: cron (terminated by SIGTERM)
+2024-11-17 18:26:45,623 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-17 18:26:45,626 INFO supervisord started with pid 1
+2024-11-17 18:26:46,631 INFO spawned: 'cron' with pid 9
+2024-11-17 18:26:46,632 INFO spawned: 'npm' with pid 10
+2024-11-17 18:26:46,633 INFO spawned: 'php-fpm' with pid 11
+2024-11-17 18:26:47,092 INFO exited: npm (exit status 127; not expected)
+2024-11-17 18:26:48,094 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 18:26:48,095 INFO spawned: 'npm' with pid 37
+2024-11-17 18:26:48,095 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 18:26:48,296 INFO exited: npm (exit status 127; not expected)
+2024-11-17 18:26:50,301 INFO spawned: 'npm' with pid 61
+2024-11-17 18:26:50,502 INFO exited: npm (exit status 127; not expected)
+2024-11-17 18:26:53,507 INFO spawned: 'npm' with pid 85
+2024-11-17 18:26:53,691 INFO exited: npm (exit status 127; not expected)
+2024-11-17 18:26:54,692 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-17 19:59:45,019 WARN received SIGQUIT indicating exit request
+2024-11-17 19:59:45,021 INFO waiting for cron, php-fpm to die
+2024-11-17 19:59:45,040 INFO stopped: php-fpm (exit status 0)
+2024-11-17 19:59:46,042 INFO stopped: cron (terminated by SIGTERM)
+2024-11-17 19:59:50,321 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-17 19:59:50,325 INFO supervisord started with pid 1
+2024-11-17 19:59:51,330 INFO spawned: 'cron' with pid 9
+2024-11-17 19:59:51,332 INFO spawned: 'npm' with pid 10
+2024-11-17 19:59:51,333 INFO spawned: 'php-fpm' with pid 11
+2024-11-17 19:59:51,729 INFO exited: npm (exit status 127; not expected)
+2024-11-17 19:59:52,730 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 19:59:52,731 INFO spawned: 'npm' with pid 37
+2024-11-17 19:59:52,732 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-17 19:59:52,930 INFO exited: npm (exit status 127; not expected)
+2024-11-17 19:59:54,934 INFO spawned: 'npm' with pid 61
+2024-11-17 19:59:55,155 INFO exited: npm (exit status 127; not expected)
+2024-11-17 19:59:58,159 INFO spawned: 'npm' with pid 85
+2024-11-17 19:59:58,345 INFO exited: npm (exit status 127; not expected)
+2024-11-17 19:59:59,345 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-18 21:12:33,273 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-18 21:12:33,278 INFO supervisord started with pid 1
+2024-11-18 21:12:34,280 INFO spawned: 'cron' with pid 9
+2024-11-18 21:12:34,281 INFO spawned: 'npm' with pid 10
+2024-11-18 21:12:34,283 INFO spawned: 'php-fpm' with pid 11
+2024-11-18 21:12:34,808 INFO exited: npm (exit status 127; not expected)
+2024-11-18 21:12:35,809 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-18 21:12:35,810 INFO spawned: 'npm' with pid 37
+2024-11-18 21:12:35,811 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-18 21:12:36,006 INFO exited: npm (exit status 127; not expected)
+2024-11-18 21:12:38,009 INFO spawned: 'npm' with pid 61
+2024-11-18 21:12:38,233 INFO exited: npm (exit status 127; not expected)
+2024-11-18 21:12:41,673 INFO spawned: 'npm' with pid 85
+2024-11-18 21:12:41,862 INFO exited: npm (exit status 127; not expected)
+2024-11-18 21:12:42,863 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-19 06:08:27,469 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-19 06:08:27,476 INFO supervisord started with pid 1
+2024-11-19 06:08:28,479 INFO spawned: 'cron' with pid 9
+2024-11-19 06:08:28,483 INFO spawned: 'npm' with pid 10
+2024-11-19 06:08:28,494 INFO spawned: 'php-fpm' with pid 11
+2024-11-19 06:08:29,914 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-19 06:08:29,914 INFO success: npm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-19 06:08:29,914 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-19 06:08:30,448 INFO exited: npm (exit status 127; not expected)
+2024-11-19 06:08:31,451 INFO spawned: 'npm' with pid 37
+2024-11-19 06:08:31,869 INFO exited: npm (exit status 127; not expected)
+2024-11-19 06:08:32,871 INFO spawned: 'npm' with pid 61
+2024-11-19 06:08:33,133 INFO exited: npm (exit status 127; not expected)
+2024-11-19 06:08:35,136 INFO spawned: 'npm' with pid 85
+2024-11-19 06:08:35,370 INFO exited: npm (exit status 127; not expected)
+2024-11-19 06:08:38,375 INFO spawned: 'npm' with pid 109
+2024-11-19 06:08:38,577 INFO exited: npm (exit status 127; not expected)
+2024-11-19 06:08:39,579 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-21 20:26:47,362 WARN received SIGQUIT indicating exit request
+2024-11-21 20:26:47,373 INFO waiting for cron, php-fpm to die
+2024-11-21 20:26:47,436 INFO stopped: php-fpm (exit status 0)
+2024-11-21 20:26:48,440 INFO stopped: cron (terminated by SIGTERM)
+2024-11-21 20:26:52,484 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-21 20:26:52,486 INFO supervisord started with pid 1
+2024-11-21 20:26:53,490 INFO spawned: 'cron' with pid 9
+2024-11-21 20:26:53,492 INFO spawned: 'npm' with pid 10
+2024-11-21 20:26:53,494 INFO spawned: 'php-fpm' with pid 11
+2024-11-21 20:26:53,929 INFO exited: npm (exit status 127; not expected)
+2024-11-21 20:26:54,931 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-21 20:26:54,932 INFO spawned: 'npm' with pid 37
+2024-11-21 20:26:54,932 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-21 20:26:55,127 INFO exited: npm (exit status 127; not expected)
+2024-11-21 20:26:57,444 INFO spawned: 'npm' with pid 61
+2024-11-21 20:26:57,621 INFO exited: npm (exit status 127; not expected)
+2024-11-21 20:27:00,627 INFO spawned: 'npm' with pid 85
+2024-11-21 20:27:00,818 INFO exited: npm (exit status 127; not expected)
+2024-11-21 20:27:01,820 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-22 20:13:14,908 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-22 20:13:14,911 INFO supervisord started with pid 1
+2024-11-22 20:13:15,913 INFO spawned: 'cron' with pid 9
+2024-11-22 20:13:15,914 INFO spawned: 'npm' with pid 10
+2024-11-22 20:13:15,915 INFO spawned: 'php-fpm' with pid 11
+2024-11-22 20:13:16,330 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:13:17,331 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-22 20:13:17,332 INFO spawned: 'npm' with pid 37
+2024-11-22 20:13:17,332 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-22 20:13:17,513 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:13:19,517 INFO spawned: 'npm' with pid 61
+2024-11-22 20:13:19,709 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:13:22,713 INFO spawned: 'npm' with pid 85
+2024-11-22 20:13:22,904 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:13:23,905 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-22 20:15:15,411 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-22 20:15:15,417 INFO supervisord started with pid 1
+2024-11-22 20:15:16,419 INFO spawned: 'cron' with pid 10
+2024-11-22 20:15:16,421 INFO spawned: 'npm' with pid 11
+2024-11-22 20:15:16,422 INFO spawned: 'php-fpm' with pid 12
+2024-11-22 20:15:16,667 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:15:17,668 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-22 20:15:17,669 INFO spawned: 'npm' with pid 38
+2024-11-22 20:15:17,670 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-22 20:15:17,899 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:15:19,902 INFO spawned: 'npm' with pid 68
+2024-11-22 20:15:20,093 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:15:23,098 INFO spawned: 'npm' with pid 92
+2024-11-22 20:15:23,304 INFO exited: npm (exit status 127; not expected)
+2024-11-22 20:15:24,305 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-23 13:59:09,642 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-23 13:59:09,645 INFO supervisord started with pid 1
+2024-11-23 13:59:10,649 INFO spawned: 'cron' with pid 9
+2024-11-23 13:59:10,653 INFO spawned: 'npm' with pid 10
+2024-11-23 13:59:10,654 INFO spawned: 'php-fpm' with pid 11
+2024-11-23 13:59:11,100 INFO exited: npm (exit status 127; not expected)
+2024-11-23 13:59:12,101 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-23 13:59:12,102 INFO spawned: 'npm' with pid 37
+2024-11-23 13:59:12,103 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-23 13:59:12,299 INFO exited: npm (exit status 127; not expected)
+2024-11-23 13:59:15,285 INFO spawned: 'npm' with pid 61
+2024-11-23 13:59:15,590 INFO exited: npm (exit status 127; not expected)
+2024-11-23 13:59:18,595 INFO spawned: 'npm' with pid 85
+2024-11-23 13:59:18,976 INFO exited: npm (exit status 127; not expected)
+2024-11-23 13:59:19,978 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-23 18:58:14,633 INFO reaped unknown pid 2544
+2024-11-23 19:32:03,383 INFO reaped unknown pid 2913
+2024-11-23 19:54:00,627 INFO reaped unknown pid 3128
+2024-11-23 19:59:17,983 INFO reaped unknown pid 3208
+2024-11-24 13:47:03,361 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-24 13:47:03,365 INFO supervisord started with pid 1
+2024-11-24 13:47:04,368 INFO spawned: 'cron' with pid 10
+2024-11-24 13:47:04,371 INFO spawned: 'npm' with pid 11
+2024-11-24 13:47:04,373 INFO spawned: 'php-fpm' with pid 12
+2024-11-24 13:47:05,353 INFO exited: npm (exit status 127; not expected)
+2024-11-24 13:47:06,354 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:47:06,355 INFO spawned: 'npm' with pid 38
+2024-11-24 13:47:06,355 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-24 13:47:06,552 INFO exited: npm (exit status 127; not expected)
+2024-11-24 13:47:08,554 INFO spawned: 'npm' with pid 62
+2024-11-24 13:47:08,745 INFO exited: npm (exit status 127; not expected)
+2024-11-24 13:47:11,751 INFO spawned: 'npm' with pid 86
+2024-11-24 13:47:11,938 INFO exited: npm (exit status 127; not expected)
+2024-11-24 13:47:12,940 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-25 20:43:56,050 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-25 20:43:56,055 INFO supervisord started with pid 1
+2024-11-25 20:43:57,059 INFO spawned: 'cron' with pid 10
+2024-11-25 20:43:57,063 INFO spawned: 'npm' with pid 11
+2024-11-25 20:43:57,064 INFO spawned: 'php-fpm' with pid 12
+2024-11-25 20:43:57,512 INFO exited: npm (exit status 127; not expected)
+2024-11-25 20:43:58,513 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-25 20:43:58,515 INFO spawned: 'npm' with pid 38
+2024-11-25 20:43:58,516 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-25 20:43:58,716 INFO exited: npm (exit status 127; not expected)
+2024-11-25 20:44:00,719 INFO spawned: 'npm' with pid 62
+2024-11-25 20:44:00,903 INFO exited: npm (exit status 127; not expected)
+2024-11-25 20:44:03,913 INFO spawned: 'npm' with pid 95
+2024-11-25 20:44:04,102 INFO exited: npm (exit status 127; not expected)
+2024-11-25 20:44:05,103 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-28 21:38:25,362 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-28 21:38:25,365 INFO supervisord started with pid 1
+2024-11-28 21:38:26,367 INFO spawned: 'cron' with pid 9
+2024-11-28 21:38:26,368 INFO spawned: 'npm' with pid 10
+2024-11-28 21:38:26,369 INFO spawned: 'php-fpm' with pid 11
+2024-11-28 21:38:26,816 INFO exited: npm (exit status 127; not expected)
+2024-11-28 21:38:27,817 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-28 21:38:27,818 INFO spawned: 'npm' with pid 37
+2024-11-28 21:38:27,818 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-28 21:38:28,038 INFO exited: npm (exit status 127; not expected)
+2024-11-28 21:38:30,042 INFO spawned: 'npm' with pid 61
+2024-11-28 21:38:30,237 INFO exited: npm (exit status 127; not expected)
+2024-11-28 21:38:33,242 INFO spawned: 'npm' with pid 85
+2024-11-28 21:38:33,477 INFO exited: npm (exit status 127; not expected)
+2024-11-28 21:38:34,478 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-11-29 20:26:55,290 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-11-29 20:26:55,294 INFO supervisord started with pid 1
+2024-11-29 20:26:56,297 INFO spawned: 'cron' with pid 9
+2024-11-29 20:26:56,299 INFO spawned: 'npm' with pid 10
+2024-11-29 20:26:56,302 INFO spawned: 'php-fpm' with pid 11
+2024-11-29 20:26:57,162 INFO exited: npm (exit status 127; not expected)
+2024-11-29 20:26:58,164 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-29 20:26:58,166 INFO spawned: 'npm' with pid 37
+2024-11-29 20:26:58,166 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-11-29 20:26:58,426 INFO exited: npm (exit status 127; not expected)
+2024-11-29 20:27:00,429 INFO spawned: 'npm' with pid 61
+2024-11-29 20:27:00,632 INFO exited: npm (exit status 127; not expected)
+2024-11-29 20:27:03,637 INFO spawned: 'npm' with pid 94
+2024-11-29 20:27:03,990 INFO exited: npm (exit status 127; not expected)
+2024-11-29 20:27:04,991 INFO gave up: npm entered FATAL state, too many start retries too quickly
