@@ -1,13 +1,13 @@
 @extends('layouts.admin_app')
 
 @section('css')
-
+<link rel="stylesheet" href="{{ asset('css/admin_staff_list.css') }}">
 @endsection
 
 @section('content')
 <div class="admin-staff-list_content">
     <div class="admin-staff-list_title">
-        <h2>スタッフ一覧</h2>
+        <h2 class="admin-staff-list_title-text">スタッフ一覧</h2>
     </div>
     <div class="admin-staff-list_table">
         <table>

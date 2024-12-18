@@ -8,7 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
-class AdminLoginController extends Controller
+class AdminLoginController extends Controller 
 {
     public function showLoginPage(): View
     {
@@ -21,8 +21,8 @@ class AdminLoginController extends Controller
         
         if (Auth::guard('admin')->attempt($credentials)) 
         {
-            $request->session()->regenerate();
-            return redirect()->intended('/admin/attendance/list/{id}');
+            $num = 0;
+            return redirect()->intended('/admin/attendance/list/' . $num);
         }
         return back()->withErrors(['email' => 'The provided credentials do not match our records.']);
     }

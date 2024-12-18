@@ -15,7 +15,7 @@ class ApprovalRouteUserSeeder extends Seeder
     public function run()
     {
         $approval_route_user = ApprovalRouteUser::create([
-            'user_id' => 2,
+            'admin_id' => 1,
             'approval_route_id' => 1,
         ]);
     }

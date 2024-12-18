@@ -29,7 +29,9 @@ Route::middleware(['auth:web','verified'])->group(function(){
     Route::get('/attendance/list/{num}', [AttendanceController::class,'attendance_index']);
     Route::get('/attendance/{id}', [AttendanceController::class,'attendance_detail'])->name('attendance_detail');
     Route::post('/attendance/stamp_correction_request', [ApprovalController::class,'application']);
+    Route::post('/stamp_correction_request/list', [ApprovalController::class,'application_list']);
 });
+
 
 //会員登録後のメール認証処理
 Route::get('/email/verify', function(){
@@ -52,15 +54,19 @@ Route::post('/email/verification-notification', function (Request $request) {
 
 //管理者用ルーティング
 
-
 Route::prefix('admin')->group(function () {
     Route::get('/login', [AdminLoginController::class, 'showLoginPage'])->name('admin.login');
     Route::post('/login', [AdminLoginController::class, 'login']);
     Route::middleware(['auth:admin'])->group(function(){
         Route::get('/attendance/list/{num}', [AdminController::class, 'admin_attendance_list']);
         Route::get('/attendance/{id}', [AdminController::class, 'admin_attendance_detail']);
+        Route::post('/attendance/update', [AdminController::class, 'admin_attendance_update']);
         Route::get('/attendance/staff/list', [AdminController::class, 'admin_staff_list']);
+        Route::post('/attendance/staff/export', [AdminController::class, 'attendance_export']);
         Route::get('/attendance/staff/{id}/{num}', [AdminController::class, 'admin_staff_attendance_list']);
+        Route::post('/stamp_correction_request/list', [AdminController::class,'admin_application_list']);
+        Route::get('/stamp_correction_request/approve/{id}', [AdminController::class,'admin_application_detail']);
+        Route::post('/stamp_correction_request/approve/{id}', [AdminController::class,'admin_application_approve']);
     });
 });
 

@@ -15,7 +15,7 @@ class CreateApprovalRouteUsersTable extends Migration
     {
         Schema::create('approval_route_users', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('admin_id')->constrained()->onDelete('cascade');
             $table->foreignId('approval_route_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

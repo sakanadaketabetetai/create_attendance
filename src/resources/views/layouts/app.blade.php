@@ -19,15 +19,19 @@
                     <a href="/attendance" class="app-header_nav-link">勤怠</a>
                 </div>
                 <div class="app-header-nav_link">
-                    <a href="/attendance/list/{{ $num = 0}}" class="app-header_nav-link">勤怠一覧</a>
+                    <a href="/attendance/list/{{ $num = 0 }}" class="app-header_nav-link">勤怠一覧</a>
                 </div>
                 <div class="app-header-nav_link">
-                    <a href="" class="app-header_nav-link">申請</a>
+                    <form action="/stamp_correction_request/list" method="post">
+                        @csrf 
+                        <input type="hidden" name="approval_status" value="pending">
+                        <button class="app-header-nav_link-button" type="submit">申請</button>
+                    </form>
                 </div>
                 <div class="app-header-nav_link">
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="app-header_nav-button" type="submit">ログアウト</button>
+                        <button class="app-header-nav_link-button" type="submit">ログアウト</button>
                     </form>
                 </div>
                 @endif
@@ -38,7 +42,6 @@
         <div class="app-content">
             @yield('content')
         </div>
-
     </main>
 </body>
 </html>

@@ -1,0 +1,120 @@
+/* Reset CSS */
+body, h1, h2, h3, h4, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Attendance Page Styles */
+.attendance-content {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.attendance-content_status {
+    margin-bottom: 20px;
+}
+.attendance-content_status-text {
+    width: 15%;
+    font-size: 16px;
+    font-weight: bold;
+    margin:20px auto;
+    padding: 3px;
+    color: #333;
+    border-radius: 16px;
+    background-color: gray; 
+}
+
+.attendance-content_date-text {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.attendance-content_time-text {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.attendance-content_buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.attendance-content_button {
+    margin-top: 30px;
+}
+
+.attendance-content_button-submit {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.attendance-content_button-submit-rest {
+    background-color: #fff;
+    color: #000;
+    padding: 5px 35px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.attendance-content_button-submit:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.attendance-content_button-submit-rest:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.attendance-content_message {
+    font-size: 20px;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .attendance-content {
+        margin: 20px;
+        padding: 15px;
+    }
+/* 
+    .attendance-content_status p {
+        font-size: 20px;
+    }
+
+    .attendance-content_date h4,
+    .attendance-content_time h4 {
+        font-size: 16px;
+    } */
+
+    .attendance-content_button-submit {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

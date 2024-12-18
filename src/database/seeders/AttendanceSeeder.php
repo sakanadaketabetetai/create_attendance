@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Attendance;
+use App\Models\Rest;
 
 class AttendanceSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class AttendanceSeeder extends Seeder
      */
     public function run()
     {
-        $admin_attendance = Attendance::create([
+        Attendance::create([
             'user_id' => 1,
             'clock_in_time' => "08:00:00",
             'clock_out_time' => "17:00:00",
@@ -26,7 +27,20 @@ class AttendanceSeeder extends Seeder
             'date' => "2024-11-18"
         ]);
 
-        $user_attendance = Attendance::create([
+        Rest::create([
+            'user_id' => 1,
+            'attendance_id' => 1,
+            'rest_start_time' => "12:00:00",
+            'rest_end_time' => "13:00:00"
+        ]);
+        Rest::create([
+            'user_id' => 1,
+            'attendance_id' => 1,
+            'rest_start_time' => "15:00:00",
+            'rest_end_time' => "15:30:00"
+        ]);
+
+        Attendance::create([
             'user_id' => 1,
             'clock_in_time' => "08:00:00",
             'clock_out_time' => "17:00:00",
@@ -36,6 +50,18 @@ class AttendanceSeeder extends Seeder
             'late_reason' => '',
             'approval_status' =>'approval',
             'date' => "2024-11-19"
+        ]);
+        Rest::create([
+            'user_id' => 1,
+            'attendance_id' => 2,
+            'rest_start_time' => "12:00:00",
+            'rest_end_time' => "13:00:00"
+        ]);
+        Rest::create([
+            'user_id' => 1,
+            'attendance_id' => 2,
+            'rest_start_time' => "15:00:00",
+            'rest_end_time' => "15:30:00"
         ]);
     }
 }

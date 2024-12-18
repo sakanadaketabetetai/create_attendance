@@ -39,6 +39,51 @@ class attendance extends Model
         return $attendance;
     }
 
+    public static function attendanceClockIn($user_id, $date, $time)
+    {
+        Attendance::create([
+            'user_id' => $user_id,
+            'clock_in_time' => $time,
+            'work_start_time' => '08:00:00',
+            'work_end_time' => '17:00:00',
+            'attendance_status'=> '出勤中',
+            'date' => $date
+        ]);
+    }
+
+    public static function attendanceClockOut($user_id, $date, $time)
+    {
+        Attendance::where('user_id', $user_id)
+                  ->where('date', $date)
+                  ->update([
+                    'clock_out_time' => $time,
+                    'attendance_status' => '退勤済'
+                  ]);
+    }
+
+    public static function approvalAttendance($approval_request){
+        Attendance::where('id', $approval_request->attendance_id)->update([
+            'clock_in_time' => $approval_request->clock_in_time,
+            'clock_out_time' => $approval_request->clock_out_time,
+            'date' => $approval_request->date,
+            'late_reason' => $approval_request->late_reason,
+            'approval_status' => 'approval'
+        ]);
+    }
+
+    public static function adminAttendanceUpdate($attendance_id, $data){
+        $attendance_date = $data['attendance_year']. '-' . $data['attendance_date'];
+
+        Attendance::where('id', $attendance_id)->update([
+            'clock_in_time' => $data['clock_in_time'],
+            'clock_out_time' => $data['clock_out_time'],
+            'date' => $attendance_date,
+            'late_reason' => $data['late_reason'],
+            'approval_status' => 'approval'
+        ]);
+
+    }
+
     public static function adjustAttendance($attendances){
         foreach ($attendances as $index => $attendance){
             $rests = $attendance->rests;

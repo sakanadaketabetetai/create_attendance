@@ -31,7 +31,7 @@ class AttendanceController extends Controller
             return view('attendance.attendance', compact(['date', 'time', 'attendance_status']));
         }
 
-        $rest = $attendance->rests->whereNull('rest_end_time')->first();
+        // $rest = $attendance->rests->whereNull('rest_end_time')->first();
         $attendance_status = $attendance->attendance_status;
 
         return view('attendance.attendance', compact(['date', 'time', 'attendance_status']));
@@ -45,14 +45,7 @@ class AttendanceController extends Controller
         $date = $datetime->toDateString();
         $time = $datetime->toTimeString();
 
-        Attendance::create([
-            'user_id' => $user_id,
-            'clock_in_time' => $time,
-            'work_start_time' => "08:00:00",
-            'work_end_time' => "17:00:00",
-            'attendance_status' => '出勤中',
-            'date' => $date
-        ]);
+        Attendance::attendanceClockIn($user_id, $date, $time);
 
         return redirect('/attendance');
     }
@@ -65,10 +58,7 @@ class AttendanceController extends Controller
         $date = $datetime->toDateString();
         $time = $datetime->toTimeString();
 
-        Attendance::where('user_id' , $user_id)->where('date', $date)->update([
-            'clock_out_time' => $time,
-            'attendance_status' => '退勤済'
-        ]);
+        Attendance::attendanceClockOut($user_id, $date, $time);
 
         return redirect('/attendance');
     }
@@ -80,14 +70,25 @@ class AttendanceController extends Controller
         $datetime = new Carbon();
 
         if($num == 0){
-            $month = $datetime->format('Y-m');
+            $month = $datetime->format('Y/m');
+            $searchMonth = $datetime->format('Y-m');
         } elseif ($num > 0){
-            $month = $datetime->addMonth($num)->format('Y-m');
+            $month = $datetime->addMonth($num)->format('Y/m');
+            $searchMonth = $datetime->format('Y-m');
         } else {
-            $month = $datetime->subMonth(-$num)->format('Y-m');
+            $month = $datetime->subMonth(-$num)->format('Y/m');
+            $searchMonth = $datetime->format('Y-m');
         }
 
-        $attendances = Attendance::where('user_id', $user_id)->where('date', 'like', "%$month%")->get();
+        $attendances = Attendance::where('user_id', $user_id)->where('date', 'like', "%$searchMonth%")->get();
+        foreach($attendances as $attendance){
+            $datetime = new Carbon($attendance->date);
+            $formattedDate = $datetime->format('m/d');
+            $weekMap = ['日','月','火', '水','木', '金', '土'];
+            $dayOfWeek = $weekMap[$datetime->dayOfWeek];
+            $date = $formattedDate. '(' . $dayOfWeek . ')';
+            $attendance->date = $date; 
+        }
 
         $adjustedAttendances = Attendance::adjustAttendance($attendances);
 
@@ -105,7 +106,7 @@ class AttendanceController extends Controller
         $attendance->formattedDate = $carbonDate->format('m月d日');
 
         $approval_request = ApprovalRequest::where('attendance_id', $attendance->id)
-                                            ->where('approver_status', 'pending')
+                                            ->where('approval_status', 'pending')
                                             ->first();
         
         if($approval_request){

@@ -1,0 +1,79 @@
+/* Reset CSS */
+body, h1, h2, h3, h4, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    font: inherit;
+    color: inherit;
+    background: none
+  }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Header Styles */
+.app-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.app-header_inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.app-header_img img {
+    height: 50px;
+}
+
+.app-header_nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.app-header-nav_link a,
+.app-header-nav_link-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.app-header-nav_link a:hover,
+.app-header-nav_link-button:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+.app-header-nav_button {
+    background: #e63946;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.app-header-nav_button:hover {
+    background-color: #b02736;
+}

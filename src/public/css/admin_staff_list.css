@@ -1,0 +1,84 @@
+/* Reset CSS */
+body, h1, h2, h3, h4, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+/* Attendance List Page Styles */
+.admin-staff-list_content {
+    max-width: 900px;
+    margin: 50px auto;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.admin-staff-list_title {
+    text-align: left;
+    border-left: 5px solid #333;
+}
+
+.admin-staff-list_title-text {
+    color: #333;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+.admin-staff-list_table {
+    overflow-x: auto;
+}
+
+.admin-staff-list_table table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.admin-staff-list_table th,
+.admin-staff-list_table td {
+    border: none;
+    background-color: #fff;
+    border-bottom: 3px solid #f9f9f9;
+    text-align: center;
+    padding: 10px;
+}
+
+.admin-staff-list_table th {
+    background-color: #fff;
+    font-weight: bold;
+    color: #333;
+}
+
+.admin-staff-list_table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-staff-list_table a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.admin-staff-list_table a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .admin-staff-list_content {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .admin-staff-list_table table {
+        font-size: 14px;
+    }
+}

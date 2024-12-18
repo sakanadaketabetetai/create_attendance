@@ -17,8 +17,13 @@ class CreateApprovalRequestsTable extends Migration
             $table->id();
             $table->foreignId('attendance_id')->constrained()->onDelete('cascade');
             $table->foreignId('approval_route_id')->constrained()->onDelete('cascade');
-            $table->foreignId('user_id')->constrained()->onDelete('cascade')->comment('承認者');
-            $table->enum('approver_status',['pending', 'approved'])->nullable()->comment('pending:保留、approval:承認');
+            $table->foreignId('admin_id')->constrained()->onDelete('cascade')->comment('承認者');
+            $table->time('clock_in_time')->nullable();
+            $table->time('clock_out_time')->nullable();
+            $table->json('rest_times')->nullable();
+            $table->date('date')->nullable();
+            $table->text('late_reason')->nullable()->comment('遅刻理由');
+            $table->enum('approval_status',['pending', 'approval'])->nullable()->comment('pending:保留、approval:承認');
             $table->timestamp('approval_at')->nullable();
             $table->timestamps();
         });

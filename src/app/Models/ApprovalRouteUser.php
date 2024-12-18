@@ -10,6 +10,6 @@ class ApprovalRouteUser extends Model
     use HasFactory;
 
     protected $fillable = [
-        'approval_route_id', 'user_id'
+        'approval_route_id', 'admin_id'
     ];
 }

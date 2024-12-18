@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('css')
-
+<link rel="stylesheet" href="{{ asset('css/attendance_index.css') }}">
 @endsection
 
 @section('content')
 <div class="attendance-list_content">
     <div class="attendance-list_title">
-        <h2>勤怠一覧</h2>
+        <h2 class="attendance-list_title-text">勤怠一覧</h2>
     </div>
     <div class="attendance-list_header">
-        <a href="{!! '/attendance/list/' . ($num - 1) !!}" class="month_link">&lt;</a>
+        <a href="{!! '/attendance/list/' . ($num - 1) !!}" class="month_link">← 前月</a>
         <span class="month_text">{{ $month }}</span>
-        <a href="{!! '/attendance/list/' . ($num + 1) !!}" class="month_link">&gt;</a>
+        <a href="{!! '/attendance/list/' . ($num + 1) !!}" class="month_link">翌月 →</a>
     </div>
     <div class="attendance-list_table">
         <table>

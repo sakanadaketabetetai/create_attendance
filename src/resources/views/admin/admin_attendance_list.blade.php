@@ -1,13 +1,13 @@
 @extends('layouts.admin_app')
 
 @section('css')
-
+<link rel="stylesheet" href="{{ asset('css/admin_attendance_list.css') }}">
 @endsection
 
 @section('content')
 <div class="admin-attendance-list_content">
     <div class="admin-attendance-list_title">
-        <h2>{{ $date->format('Y年m月d日') }}の勤怠</h2>
+        <h2 class="admin-attendance-list_title-text">{{ $date->format('Y年m月d日') }}の勤怠</h2>
     </div>
     <div class="admin-attendance-list_header">
         <a href="{!! '/admin/attendance/list/' . ($num - 1) !!}" class="month_link">&lt;</a>

@@ -49,6 +49,18 @@ class FortifyServiceProvider extends ServiceProvider
 
         // カスタム認証ロジックの定義
         Fortify::authenticateUsing(function (Request $request) { 
+            $request->validate([
+                'email' => ['required','email', 'max:255'],
+                'password' => ['required','string', 'min:8'],
+            ], [
+                'email.required' => 'メールアドレスを入力してください',
+                'email.email' => '有効なメールアドレス形式で入力してください',
+                'email.max' => 'メールアドレスは255文字以内で入力してください',
+                'password.required' => 'パスワードを入力してください',
+                'password.string' => 'パスワードは文字形式で入力してください',
+                'password.min' => 'パスワードは8文字以上で入力してください',
+            ]);
+
             if ($request->is('admin/*')) {
                 // 管理者用認証ロジック
                 $admin = Admin::where('email', $request->email)->first();
@@ -77,6 +89,5 @@ class FortifyServiceProvider extends ServiceProvider
         Fortify::verifyEmailView(function(){
             return view('auth.verify-email');
         });
-
     }
 }
