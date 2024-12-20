@@ -98,7 +98,8 @@ class AttendanceController extends Controller
     public function attendance_detail($id){
         $user = Auth::user();
         $attendance = Attendance::find($id);
-        $rests = Rest::where('attendance_id', $attendance->id)->get();
+
+        $rests = Rest::where('attendance_id', $id)->get();
 
         $carbonDate = new Carbon($attendance->date);
 
@@ -113,6 +114,6 @@ class AttendanceController extends Controller
             $attendance->approval_status = 'pending';
         }
 
-        return view('attendance.attendance_detail', compact(['attendance', 'rests', 'user']));
+        return view('attendance.attendance_detail', compact(['attendance','approval_request', 'rests', 'user']));
     }
 }

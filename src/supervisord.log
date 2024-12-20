@@ -718,3 +718,139 @@
 2024-12-19 00:10:46,159 INFO spawned: 'npm' with pid 85
 2024-12-19 00:10:46,376 INFO exited: npm (exit status 127; not expected)
 2024-12-19 00:10:47,377 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-12-19 20:24:23,131 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-12-19 20:24:23,139 INFO supervisord started with pid 1
+2024-12-19 20:24:24,142 INFO spawned: 'cron' with pid 9
+2024-12-19 20:24:24,142 INFO spawned: 'npm' with pid 10
+2024-12-19 20:24:24,143 INFO spawned: 'php-fpm' with pid 11
+2024-12-19 20:24:24,671 INFO exited: npm (exit status 127; not expected)
+2024-12-19 20:24:25,673 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-19 20:24:25,674 INFO spawned: 'npm' with pid 37
+2024-12-19 20:24:25,674 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-19 20:24:25,916 INFO exited: npm (exit status 127; not expected)
+2024-12-19 20:24:27,920 INFO spawned: 'npm' with pid 61
+2024-12-19 20:24:28,137 INFO exited: npm (exit status 127; not expected)
+2024-12-19 20:24:31,142 INFO spawned: 'npm' with pid 85
+2024-12-19 20:24:31,357 INFO exited: npm (exit status 127; not expected)
+2024-12-19 20:24:32,359 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-12-20 14:06:11,098 INFO reaped unknown pid 2170
+2024-12-20 14:08:07,754 INFO reaped unknown pid 2194
+2024-12-20 14:08:20,051 INFO reaped unknown pid 2200
+2024-12-20 14:10:16,373 INFO reaped unknown pid 2227
+2024-12-20 14:10:32,824 INFO reaped unknown pid 2236
+2024-12-20 14:10:44,281 INFO reaped unknown pid 2245
+2024-12-20 14:10:56,614 INFO reaped unknown pid 2254
+2024-12-20 14:11:09,155 INFO reaped unknown pid 2272
+2024-12-20 14:11:24,342 INFO reaped unknown pid 2281
+2024-12-20 14:11:40,817 INFO reaped unknown pid 2290
+2024-12-20 14:12:14,266 INFO reaped unknown pid 2308
+2024-12-20 14:12:25,242 INFO reaped unknown pid 2317
+2024-12-20 14:13:23,798 INFO reaped unknown pid 2335
+2024-12-20 14:14:00,718 INFO reaped unknown pid 2353
+2024-12-20 14:16:43,333 INFO reaped unknown pid 2386
+2024-12-20 14:17:11,157 INFO reaped unknown pid 2407
+2024-12-20 14:25:45,111 INFO reaped unknown pid 2488
+2024-12-20 14:48:51,022 INFO reaped unknown pid 2704
+2024-12-20 14:51:54,788 INFO reaped unknown pid 2740
+2024-12-20 14:53:06,726 INFO reaped unknown pid 2767
+2024-12-20 14:56:07,080 INFO reaped unknown pid 2803
+2024-12-20 14:56:17,283 INFO reaped unknown pid 2812
+2024-12-20 14:56:45,315 INFO reaped unknown pid 2821
+2024-12-20 14:57:19,072 INFO reaped unknown pid 2839
+2024-12-20 14:58:20,471 INFO reaped unknown pid 2857
+2024-12-20 15:04:10,203 INFO reaped unknown pid 2920
+2024-12-20 15:04:49,963 INFO reaped unknown pid 2933
+2024-12-20 15:21:53,414 INFO reaped unknown pid 3098
+2024-12-20 15:22:07,367 INFO reaped unknown pid 3116
+2024-12-20 15:31:40,984 INFO reaped unknown pid 3214
+2024-12-20 15:37:15,809 INFO reaped unknown pid 3277
+2024-12-20 15:41:33,663 INFO reaped unknown pid 3322
+2024-12-20 15:49:20,520 INFO reaped unknown pid 3403
+2024-12-20 16:06:50,112 INFO reaped unknown pid 3565
+2024-12-20 16:18:27,589 INFO reaped unknown pid 3685
+2024-12-20 16:21:47,040 INFO reaped unknown pid 3728
+2024-12-20 16:26:55,418 INFO reaped unknown pid 3782
+2024-12-20 16:29:21,860 INFO reaped unknown pid 3818
+2024-12-20 16:30:33,707 INFO reaped unknown pid 3836
+2024-12-20 16:35:53,042 INFO reaped unknown pid 3890
+2024-12-20 16:38:01,698 INFO reaped unknown pid 3917
+2024-12-20 16:38:22,574 INFO reaped unknown pid 3935
+2024-12-20 16:40:51,924 INFO reaped unknown pid 3962
+2024-12-20 16:41:39,858 INFO reaped unknown pid 3980
+2024-12-20 16:42:35,235 INFO reaped unknown pid 3998
+2024-12-20 16:45:42,657 INFO reaped unknown pid 4034
+2024-12-20 16:45:55,391 INFO reaped unknown pid 4043
+2024-12-20 16:48:09,434 INFO reaped unknown pid 4079
+2024-12-20 16:48:19,822 INFO reaped unknown pid 4088
+2024-12-20 16:51:01,710 INFO reaped unknown pid 4115
+2024-12-20 16:53:13,475 INFO reaped unknown pid 4159
+2024-12-20 16:57:56,395 INFO reaped unknown pid 4204
+2024-12-20 16:58:47,964 INFO reaped unknown pid 4222
+2024-12-20 17:07:06,936 INFO reaped unknown pid 4312
+2024-12-20 17:07:57,958 INFO reaped unknown pid 4333
+2024-12-20 17:20:44,825 INFO reaped unknown pid 4486
+2024-12-20 17:22:40,220 INFO reaped unknown pid 4517
+2024-12-20 17:22:41,814 INFO reaped unknown pid 4523
+2024-12-20 17:22:44,876 INFO reaped unknown pid 4529
+2024-12-20 17:30:13,588 INFO reaped unknown pid 4610
+2024-12-20 17:30:31,289 INFO reaped unknown pid 4619
+2024-12-20 17:40:47,474 INFO reaped unknown pid 4718
+2024-12-20 17:41:58,438 INFO reaped unknown pid 4736
+2024-12-20 17:42:35,361 INFO reaped unknown pid 4758
+2024-12-20 17:43:44,149 INFO reaped unknown pid 4776
+2024-12-20 17:55:47,401 INFO reaped unknown pid 4893
+2024-12-20 17:56:28,764 INFO reaped unknown pid 4911
+2024-12-20 18:00:31,343 INFO reaped unknown pid 4956
+2024-12-20 20:22:25,614 INFO reaped unknown pid 5220
+2024-12-20 20:24:06,260 INFO reaped unknown pid 5247
+2024-12-20 20:25:48,573 INFO reaped unknown pid 5265
+2024-12-20 20:26:09,308 INFO reaped unknown pid 5283
+2024-12-20 20:33:14,696 INFO reaped unknown pid 5355
+2024-12-20 20:35:28,220 INFO reaped unknown pid 5382
+2024-12-20 20:35:35,604 INFO reaped unknown pid 5391
+2024-12-20 20:36:40,849 INFO reaped unknown pid 5409
+2024-12-20 20:39:10,248 INFO reaped unknown pid 5445
+2024-12-20 20:39:27,785 INFO reaped unknown pid 5454
+2024-12-20 20:46:52,685 INFO reaped unknown pid 5526
+2024-12-20 20:47:46,114 INFO reaped unknown pid 5556
+2024-12-20 20:48:00,192 INFO reaped unknown pid 5565
+2024-12-20 20:51:39,141 INFO reaped unknown pid 5610
+2024-12-20 21:08:57,528 INFO reaped unknown pid 5772
+2024-12-20 21:13:17,897 INFO reaped unknown pid 5826
+2024-12-20 21:13:40,361 INFO reaped unknown pid 5835
+2024-12-20 21:14:00,992 INFO reaped unknown pid 5844
+2024-12-20 21:14:17,884 INFO reaped unknown pid 5862
+2024-12-20 21:19:05,586 INFO reaped unknown pid 5919
+2024-12-20 21:20:37,131 INFO reaped unknown pid 5937
+2024-12-20 21:30:54,182 INFO reaped unknown pid 6036
+2024-12-20 21:31:06,241 INFO reaped unknown pid 6054
+2024-12-20 21:41:32,229 INFO reaped unknown pid 6153
+2024-12-20 21:42:13,689 INFO reaped unknown pid 6171
+2024-12-20 21:49:37,723 INFO reaped unknown pid 6243
+2024-12-20 21:49:41,705 INFO reaped unknown pid 6252
+2024-12-20 21:50:00,226 INFO reaped unknown pid 6261
+2024-12-20 21:54:43,786 INFO reaped unknown pid 6315
+2024-12-20 21:54:52,865 INFO reaped unknown pid 6324
+2024-12-20 23:49:18,055 INFO reaped unknown pid 7414
+2024-12-20 23:49:46,759 INFO reaped unknown pid 7423
+2024-12-20 23:52:37,171 INFO reaped unknown pid 7463
+2024-12-20 23:53:09,164 INFO reaped unknown pid 7481
+2024-12-20 23:54:58,027 WARN received SIGQUIT indicating exit request
+2024-12-20 23:54:58,037 INFO waiting for cron, php-fpm to die
+2024-12-20 23:54:58,082 INFO stopped: php-fpm (exit status 0)
+2024-12-20 23:54:59,085 INFO stopped: cron (terminated by SIGTERM)
+2024-12-20 23:56:47,872 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2024-12-20 23:56:47,874 INFO supervisord started with pid 1
+2024-12-20 23:56:48,877 INFO spawned: 'cron' with pid 9
+2024-12-20 23:56:48,880 INFO spawned: 'npm' with pid 10
+2024-12-20 23:56:48,882 INFO spawned: 'php-fpm' with pid 11
+2024-12-20 23:56:49,402 INFO exited: npm (exit status 127; not expected)
+2024-12-20 23:56:50,403 INFO success: cron entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-20 23:56:50,405 INFO spawned: 'npm' with pid 37
+2024-12-20 23:56:50,405 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2024-12-20 23:56:50,622 INFO exited: npm (exit status 127; not expected)
+2024-12-20 23:56:52,627 INFO spawned: 'npm' with pid 61
+2024-12-20 23:56:52,824 INFO exited: npm (exit status 127; not expected)
+2024-12-20 23:56:55,829 INFO spawned: 'npm' with pid 85
+2024-12-20 23:56:56,033 INFO exited: npm (exit status 127; not expected)
+2024-12-20 23:56:57,034 INFO gave up: npm entered FATAL state, too many start retries too quickly

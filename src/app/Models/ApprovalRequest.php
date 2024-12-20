@@ -35,6 +35,11 @@ class ApprovalRequest extends Model
         return $this->belongsTo(ApprovalRoute::class);
     }
 
+    public function admin()
+    {
+        return $this->belongsTo(Admin::class);
+    }
+
     //一般ユーザーの勤怠情報変更申請処理
     public static function createApprovalRequest($attendance_id, $approval_route_id, $data, $rest_times)
     {

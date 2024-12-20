@@ -4,6 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Validator;
+use Carbon\Carbon;
 
 class ApplicationRequest extends FormRequest
 {
@@ -46,22 +47,34 @@ class ApplicationRequest extends FormRequest
 
     protected function withValidator($validator)
     {
-        $validator->after(function ($validator){
-            if($this->clock_in_time >= $this->clock_out_time){
+        $validator->after(function ($validator) {
+            $clockInTime = new Carbon($this->clock_in_time);
+            $clockOutTime = new Carbon($this->clock_out_time);
+    
+            if ($clockInTime >= $clockOutTime) {
                 $validator->errors()->add('clock_in_time', '出勤時間もしくは退勤時間が不適切な値です。');
-            } 
-            foreach ($this->rest_start_time as  $index => $start_time){
-                if($start_time >= $this->clock_out_time){
-                    $validator->errors()->add('rest_start_time'. $index, '休憩時間が勤務時間外です。');
-                } 
-                
-                if ($this->rest_end_time[$index] >= $this->clock_out_time){
-                    $validator->errors()->add('rest_end_time.'. $index , '休憩時間が勤務時間外です。');
-                }
-                if ($start_time >= $this->rest_end_time[$index]){
-                    $validator->errors()->add('rest_start_time.' . $index, '休憩開始時間は休憩終了時間より前である必要があります。');
+            }
+    
+            if (isset($this->rest_start_time) && is_array($this->rest_start_time)) {
+                foreach ($this->rest_start_time as $index => $start_time) {
+                    $restStartTime = new Carbon($start_time);
+                    $restEndTime = new Carbon($this->rest_end_time[$index]);
+    
+                    if ($restStartTime >= $clockOutTime) {
+                        $validator->errors()->add('rest_start_time.' . $index, '休憩時間が勤務時間外です。');
+                    }
+                    if ($restStartTime <= $clockInTime) {
+                        $validator->errors()->add('rest_start_time.' . $index, '休憩時間が勤務時間外です。');
+                    }
+                    if ($restEndTime >= $clockOutTime) {
+                        $validator->errors()->add('rest_end_time.' . $index, '休憩時間が勤務時間外です。');
+                    }
+                    if ($restStartTime >= $restEndTime) {
+                        $validator->errors()->add('rest_start_time.' . $index, '休憩開始時間は休憩終了時間より前である必要があります。');
+                    }
                 }
             }
         });
     }
+    
 }

@@ -54,6 +54,7 @@
                 </td>
             </tr>
         </table>
+        @if($approval_request->approval_status == 'pending')
         <div class="approve-correct_button">
             <form action="/admin/stamp_correction_request/approve/{{ $approval_request->id }}" method="post">
                 @csrf
@@ -61,6 +62,12 @@
                 <button class="approve-correct_button-submit" type="submit">承認</button>
             </form>
         </div>
+        @endif            
+        @if($approval_request->approval_status == "approval")
+            <div class="admin-attendance-detail_approval">
+                <span class="admin-attendance-detail_button-submit">承認済み</span>
+            </div>
+        @endif
     </div>
 </div>
 @endsection

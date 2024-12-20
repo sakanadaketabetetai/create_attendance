@@ -14,29 +14,6 @@ use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
-    // public function admin_attendance_list(Request $request){
-    //     $num = (int)$request->num;
-    //     $datetime = new Carbon();
-    //     if($num == 0){
-    //         $date = $datetime;
-    //     } else {
-    //         $date = $datetime->subDay(-$num);
-    //     }
-
-    //     $searchDate = $date->format('Y-m-d');
-
-    //     $approval_requests = ApprovalRequest::where('date', $searchDate)->get();
-
-    //     foreach ($approval_requests as $approval_request){
-    //         $user_id = Attendance::find($approval_request->attendance_id)->value('user_id');
-    //         $approval_request->user_name = User::find($user_id)->value('name');
-    //     }
-
-    //     $adjustedAttendances = Attendance::adjustAttendance($approval_requests);
-
-    //     return view('admin.admin_attendance_list', compact(['approval_requests', 'date', 'num']));
-    // }
-
     public function admin_attendance_list(Request $request){
         $num = (int)$request->num;
         $datetime = new Carbon();
@@ -57,7 +34,7 @@ class AdminController extends Controller
         $adjustedAttendances = Attendance::adjustAttendance($attendances);
 
         return view('admin.admin_attendance_list', compact(['attendances', 'date', 'num']));
-    }
+    } 
 
     public function admin_attendance_detail($id){
         $attendance = Attendance::find($id);

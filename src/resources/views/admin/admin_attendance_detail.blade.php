@@ -87,9 +87,16 @@
                 </tr>
                 @enderror
             </table>
-            <div class="admin-attendance-detail_button">
-                <button class="admin-attendance-detail_button-submit" type="submit">修正</button>
-            </div>
+            @if($attendance->approval_status == '')
+                <div class="admin-attendance-detail_button">
+                    <button class="admin-attendance-detail_button-submit" type="submit">修正</button>
+                </div>
+            @endif
+            @if($attendance->approval_status == "approval");
+                <div class="admin-attendance-detail_approval">
+                    <span class="admin-attendance-detail_button-submit">承認済み</span>
+                </div>
+            @endif
         </form>
     </div>
 </div>

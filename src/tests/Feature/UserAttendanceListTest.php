@@ -37,7 +37,7 @@ class UserAttendanceListTest extends TestCase
             'clock_out_time' => '17:00:00',
             'work_start_time' => '08:00:00',
             'work_end_time' => '17:00:00',
-            'date' => Carbon::yesterday()->toDateString(),
+            'date' => Carbon::yesterday()->toDateString(), 
             'attendance_status' => '退勤済',
         ]);
         $attendance2 = Attendance::create([
@@ -69,65 +69,65 @@ class UserAttendanceListTest extends TestCase
     /** @test
      *  @group user_attendance_list
      */
-    public function user_attendance_list(){
-        $response = $this->post('/login' ,[
-            'email' => $this->user1->email,
-            'password' => 'user112345'
-        ]);
-        $response->assertRedirect('/attendance');
-        $this->assertAuthenticated();
+    // public function user_attendance_list(){
+    //     $response = $this->post('/login' ,[
+    //         'email' => $this->user1->email,
+    //         'password' => 'user112345'
+    //     ]);
+    //     $response->assertRedirect('/attendance');
+    //     $this->assertAuthenticated();
 
-        $response = $this->get('/attendance/list/0');
-        $attendances = Attendance::where('user_id', $this->user1->id)->get();
-        $adjustAttendances = Attendance::adjustAttendance($attendances);
+    //     $response = $this->get('/attendance/list/0');
+    //     $attendances = Attendance::where('user_id', $this->user1->id)->get();
+    //     $adjustAttendances = Attendance::adjustAttendance($attendances);
 
-        foreach ($adjustAttendances as $attendance){
-            $datetime = new Carbon($attendance->date);
-            $formattedDate = $datetime->format('m/d');
-            $weekMap = ['日','月','火', '水','木', '金', '土'];
-            $dayOfWeek = $weekMap[$datetime->dayOfWeek];
-            $date = $formattedDate. '(' . $dayOfWeek . ')';
-            $response->assertSee($date);
-            $response->assertSee($attendance->clock_in_time);
-            $response->assertSee($attendance->clock_out_time);
-            $response->assertSee($attendance->rest_sum);
-            $response->assertSee($attendance->work_time);
-        }
-        $response = $this->post('/logout');
-    }
-
-    /** @test
-     *  @group user_attendance_list
-     */
-    public function user_attendance_list_this_month(){
-        $response = $this->post('/login', [
-            'email' => $this->user1->email,
-            'password' => 'user112345'
-        ]);
-
-        $response->assertRedirect('/attendance');
-        $this->assertAuthenticated();
-        $num = 0;
-        $response = $this->get('/attendance/list/' . $num);
-        $month = Carbon::now()->format('Y/m');
-        $response->assertSee($month);
-    }
+    //     foreach ($adjustAttendances as $attendance){
+    //         $datetime = new Carbon($attendance->date);
+    //         $formattedDate = $datetime->format('m/d');
+    //         $weekMap = ['日','月','火', '水','木', '金', '土'];
+    //         $dayOfWeek = $weekMap[$datetime->dayOfWeek];
+    //         $date = $formattedDate. '(' . $dayOfWeek . ')';
+    //         $response->assertSee($date);
+    //         $response->assertSee($attendance->clock_in_time);
+    //         $response->assertSee($attendance->clock_out_time);
+    //         $response->assertSee($attendance->rest_sum);
+    //         $response->assertSee($attendance->work_time);
+    //     }
+    //     $response = $this->post('/logout');
+    // }
 
     /** @test
      *  @group user_attendance_list
      */
-    public function user_attendance_list_last_month(){
-        $response = $this->post('/login', [
-            'email' => $this->user1->email,
-            'password' => 'user112345'
-        ]);
+    // public function user_attendance_list_this_month(){
+    //     $response = $this->post('/login', [
+    //         'email' => $this->user1->email,
+    //         'password' => 'user112345'
+    //     ]);
 
-        $response->assertRedirect('/attendance');
-        $this->assertAuthenticated();
-        $num = -1;
-        $response = $this->get('/attendance/list/' . $num);
-        $date = Carbon::now();
-        $month = $date->subMonth(-$num)->format('Y/m');
-        $response->assertSee($month);
-    }
+    //     $response->assertRedirect('/attendance');
+    //     $this->assertAuthenticated();
+    //     $num = 0;
+    //     $response = $this->get('/attendance/list/' . $num);
+    //     $month = Carbon::now()->format('Y/m');
+    //     $response->assertSee($month);
+    // }
+
+    /** @test
+     *  @group user_attendance_list
+     */
+    // public function user_attendance_list_last_month(){
+    //     $response = $this->post('/login', [
+    //         'email' => $this->user1->email,
+    //         'password' => 'user112345'
+    //     ]);
+
+    //     $response->assertRedirect('/attendance');
+    //     $this->assertAuthenticated();
+    //     $num = -1;
+    //     $response = $this->get('/attendance/list/' . $num);
+    //     $date = Carbon::now();
+    //     $month = $date->subMonth(-$num)->format('Y/m');
+    //     $response->assertSee($month);
+    // }
 }

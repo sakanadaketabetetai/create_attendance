@@ -48,7 +48,7 @@
                 <td>{{ $approval_request->approval_status }}</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $approval_request->attendance->date }}</td>
-                <td>{{ $approval_request->attendance->late_reason }}</td>
+                <td>{{ $approval_request->late_reason }}</td>
                 <td>{{ $approval_request->approval_at }}</td>
                 <td>
                     <a href="/attendance/{{ $approval_request->attendance_id }}">詳細</a>

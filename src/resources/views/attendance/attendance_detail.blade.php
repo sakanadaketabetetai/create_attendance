@@ -70,7 +70,7 @@
                     <td>{{ $message }}</td>
                 </tr>
                 @enderror
-                @error('rest_end_time.' . $index)
+                @error('rest_end_time.' . $index) 
                 <tr>
                     <th></th>
                     <td>{{ $message }}</td>
@@ -138,7 +138,7 @@
             <tr>
                 <th>備考</th>
                 <td>
-                    <textarea name="late_reason" id="">{{ $attendance->late_reason }}</textarea>
+                    <span class="">{{ $approval_request->late_reason }}</span>
                 </td>
             </tr>
         </table>

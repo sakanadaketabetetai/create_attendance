@@ -21,7 +21,7 @@ class ApprovalController extends Controller
 
             //休憩は複数回可能であるため、配列にし、json形式でapproval_requestsテーブルに保存する
             $rest_times = [];
-            foreach ($data['rest_start_time'] as $index => $start){
+            foreach ($data['rest_start_time'] as $index => $start){ 
                 $rest_times[] = [
                     'rest_start_time' => $start,
                     'rest_end_time' => $data['rest_end_time'][$index]

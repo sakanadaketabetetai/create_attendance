@@ -79,6 +79,20 @@ h2 {
     transition: background 0.3s ease;
 }
 
+.admin-attendance-detail_approval {
+    text-align: right;
+}
+
+.admin-attendance-detail_button-submit {
+    background: gray;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
 .approve-correct_button-submit:hover {
     background: #0056b3;
 }
