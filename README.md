@@ -49,11 +49,8 @@ coachtech 勤怠管理システムを作成した
 - 日別の出勤データのフィルタリング
 - ユーザーフレンドリーなインターフェース
 
-## テーブル設計
-![スクリーンショット_3-8-2024_191053_](https://github.com/user-attachments/assets/d9e379aa-1519-40ec-9827-9dad83b0172b)
-
 ## ER図
-![er](https://github.com/user-attachments/assets/69e8d0a2-b269-45a4-93b0-349661ff5e3c)
+![attendance_er](https://github.com/user-attachments/assets/e8a754d6-70f2-411e-b2b3-5f70486233f3)
 
 ## 環境構築
 
