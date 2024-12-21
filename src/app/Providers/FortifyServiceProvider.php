@@ -28,7 +28,7 @@ class FortifyServiceProvider extends ServiceProvider
             public function toResponse($request)
             {
                 //管理者ユーザーチェック
-                if ($request->is('admin/*')){
+                if ($request->is('/admin/*')){
                     return redirect('/admin/login');
                 }
                 return redirect('/login');
@@ -38,7 +38,7 @@ class FortifyServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap any application services.
-     */
+     */ 
     public function boot(): void
     {
         Fortify::createUsersUsing(CreateNewUser::class);

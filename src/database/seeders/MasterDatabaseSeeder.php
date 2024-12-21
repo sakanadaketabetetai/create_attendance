@@ -27,7 +27,7 @@ class MasterDatabaseSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        $adminPermissions = ['manage-user'];
+        $adminPermissions = ['management-user'];
         $userPermissions = ['view-attendance-info'];
 
         foreach ($adminPermissions as $permission) {
