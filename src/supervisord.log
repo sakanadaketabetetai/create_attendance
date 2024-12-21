@@ -892,3 +892,4 @@
 2024-12-21 16:52:32,827 INFO spawned: 'npm' with pid 85
 2024-12-21 16:52:33,043 INFO exited: npm (exit status 127; not expected)
 2024-12-21 16:52:34,045 INFO gave up: npm entered FATAL state, too many start retries too quickly
+2024-12-21 17:17:08,616 INFO reaped unknown pid 347
